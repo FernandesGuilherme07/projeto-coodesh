@@ -1,5 +1,7 @@
 import { Component } from "react";
 import "./App.css";
+import { Footer } from "./components/Footer";
+import { NavBar } from "./components/NavBar";
 
 class App extends Component {
   state = {
@@ -20,21 +22,25 @@ class App extends Component {
     const { articles } = this.state;
 
     return (
-      <section className="container">
-        <div className="articles">
-          {articles.map((article) => (
-            <div className="article">
-              <img src={article.imageUrl} alt={article.title} />
-              <div key={article.id} className="article-content">
-                <a href={article.url}>
-                  <h1>{article.title}</h1> <br />
-                  <p>{article.summary}</p>
-                </a>
+      <>
+        <NavBar />
+        <section className="container">
+          <div className="articles">
+            {articles.map((article) => (
+              <div className="article">
+                <img src={article.imageUrl} alt={article.title} />
+                <div key={article.id} className="article-content">
+                  <a href={article.url} target="_blank" rel="noreferrer">
+                    <h1>{article.title}</h1> <br />
+                    <p>{article.summary}</p>
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+        <Footer />
+      </>
     );
   }
 }
