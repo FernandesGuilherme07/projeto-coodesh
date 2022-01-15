@@ -12,7 +12,6 @@ export const AreaArticleCard = styled.article`
   img {
     max-width: 100%;
   }
-
   a {
     text-decoration: none;
     color: #000;

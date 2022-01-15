@@ -9,7 +9,12 @@ export const AreaNav = styled.header`
   padding: 10px 10%;
   align-items: center;
   margin-bottom: 5px;
-  @media (max-width: 630px) {
-    padding: 10px;
+  @media (max-width: 460px) {
+    justify-content: center;
+  }
+  img {
+    height: 70px;
+    width: 150px;
+    border-radius: 5px;
   }
 `;

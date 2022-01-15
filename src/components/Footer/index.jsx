@@ -1,6 +1,10 @@
 import { AreaFooter } from "./footer.styled";
 
-export const Footer = () => {
+export const Footer = ({ searchValue, handleChange }) => {
   const currentDate = new Date().getFullYear();
-  return <AreaFooter>© {currentDate} - Guilherme Fernandes</AreaFooter>;
+  return (
+    <AreaFooter>
+      <h3>{currentDate} © - Guilherme Fernandes</h3>
+    </AreaFooter>
+  );
 };
